@@ -1,0 +1,135 @@
+body {
+    background: rgb(223, 215, 215);
+}
+
+.barra {
+    background: #05003d;
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.barra span {
+    font-size: small;   
+    margin-top: 0 auto;
+    display: flex;
+    justify-content:end;
+}
+
+.barra p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;   
+  margin-top: 0 auto;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+}
+.sell-box {
+    width: 40%;
+    display: grid;
+    grid: 15px;
+    margin: 0 auto;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sell-box legend {
+    background-color: #4000ff;
+    height: 50px;
+    width: 150px;
+    border: 1px solid #efe8e8;
+    /* border:1px solid #ffffff; */
+    color:#ffffff;
+    align-items: end;
+    font-weight: 500;
+    padding: 8px;
+}
+
+.sell-box button {
+    background-color: #4000ff;
+    height: 100px;
+    width: 200px;
+    border: 1px solid #efe8e8;
+    /* border:1px solid #ffffff; */
+    color:#ffffff;
+    align-items: center;
+    font-weight: 500;
+    padding: 8px;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+.sell-box button:hover {
+    background-color: #00daed;
+}
+
+.descricao {
+    width: 90%;
+    grid: 15px;
+    margin: 0 auto;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+.descricao h1 {
+    font-family: monospace;
+    border-top:5px solid rgb(1, 52, 6);
+    color: rgb(12, 92, 3);
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    /*background-image: url('icons/images.jpeg');*/
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    padding: 20px; 
+    color: #000000;
+    text-align: left;
+    position: relative;
+}
+
+.descricao p {
+    padding: 10px;
+    margin: 0 0px;
+    font-size: large;
+    font-weight: 500;
+}
+
+/* Estilo base do acordeão */
+.accordion {
+    width: 1500px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Estilo dos botões do acordeão */
+.accordion-btn {
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    width: 90%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    font-size: large;
+    font-weight: 500;
+}
+
+/* Estilo dos botões quando hover */
+.accordion-btn:hover {
+    background-color: #ddd;
+    color: #05003d;
+}
+
+/* Estilo do conteúdo oculto */
+.conteudo {
+    display: none;
+    padding: 10px;
+    background-color: #ddd;
+}
+
+/* Estilo do conteúdo quando expandido */
+.active {
+    display: block;
+}

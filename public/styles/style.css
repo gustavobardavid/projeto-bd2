@@ -1,0 +1,485 @@
+* {
+    margin: 0 auto;
+    padding: 2px;
+    box-sizing: border-box;
+}
+/* 
+body {
+    background: rgb(223, 215, 215);
+} */
+
+.main {
+    width: 90%;
+    display: flex;
+    padding: 10px;
+}
+
+.main aside {
+    box-sizing: border-box;
+    margin: 0 0;
+    border: 0.2px solid #ffffff;
+    padding: 5px 4px;
+    box-sizing: border-box; 
+}
+
+.main aside img {
+    max-width: 150px;
+}
+
+.main aside p {
+    margin: 0 auto;
+    padding: 5px;
+    border-top: 0.8px solid #ccc;
+    border-bottom: 0.8px solid #ccc;
+}
+
+
+.main aside p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Três colunas igualmente espaçadas */
+    gap: 5px; /* Espaçamento entre as fotos */
+    max-width: 1100px; /* Largura máxima da grade */
+    margin: 0 auto; /* Centraliza a grade horizontalmente */
+    padding: 1px; 
+}
+
+.imgs img {
+    width: 550px;
+    height: 450px;
+    box-sizing: border-box;
+    border: 1px solid #da0000;
+    border-radius: 50px;
+    padding: 10px 10px;
+    box-sizing: border-box; 
+}
+
+.imgs video {
+    width: 550px;
+    height: 450px;
+    box-sizing: border-box;
+}
+
+
+#banner {
+    display: inline-block;
+}
+
+#banner img {
+    width: 90%;
+    height: auto;
+}
+    
+.main ul {
+    list-style-type:none ;
+    margin: 0;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.main li {
+    
+    margin-right: 10px;
+}
+
+.main li a {
+    text-decoration: none;
+}
+
+.main li a:hover {
+    text-decoration: underline;
+}
+
+.main aside h3 {
+    font-family: monospace;
+    border-top: 5px solid black;
+    background: linear-gradient(to right, #ff0000, #ffffff);
+    padding: 5px;
+    color: #fff;
+}
+
+.main aside li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    color: #fff;
+}
+
+.main aside li a {
+    text-decoration: none;
+}
+
+.main aside li a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    border-top:1px solid #ff0000;
+    background: linear-gradient(to right, #0E1219, #05003d); 
+    padding: 20px;
+    color: #fff;
+    
+}
+
+.logo a {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:large;
+}
+
+.buscar form {
+    text-align: center;
+    gap: 15px; 
+    width: 60%;
+}
+
+
+.buscar input {
+    width: 70%;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none ;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.buscar button {
+    background-color: #0099ff;
+    height:40px;
+    width: 10%;
+    border: none;
+    border-radius: 4px;
+    color:#fff;
+    font-size: small;
+    align-items: center;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.buscar span {
+    font-size: larger;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+.cliente legend {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: large;
+    display: flexbox;
+    justify-content: end;
+    text-align: end;
+    
+}
+
+.sobre {
+    font-family: monospace;
+    font: bold;
+    font-size: larger;
+    display: flex;
+    padding: 0px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-top:3px solid rgb(0, 13, 255);
+
+}
+
+.sobre ul {
+    list-style-type:none ;
+    margin: 0;
+    padding: 0;
+}
+
+.sobre li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.sobre li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.sobre li span {
+    font-size: small;
+}
+
+.sobre li a:hover {
+    text-decoration: none;
+    color:#0099ff;
+}
+
+.sobre-curso {
+    display: flex;
+    flex-wrap:wrap-reverse;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.curso {
+    display: flexbox;
+    justify-content: center;
+    text-align: center;
+    margin: 50px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif  ;
+}
+
+.curso p {
+    margin: 0 auto;
+    padding: 10px;
+    text-overflow: ellipsis;
+}
+
+
+.curso h1 {
+    font-family: monospace;
+    border-top:5px solid rgb(1, 52, 6);
+    color: rgb(12, 92, 3);
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    /*background-image: url('icons/images.jpeg');*/
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    padding: 20px; 
+    color: #000000;
+    text-align: left;
+}
+
+.curso h2 {
+    font-family: Arial, Helvetica, sans-serif   ;
+    font-size: medium;
+    border-top:5px solid rgb(1, 52, 6);
+    color: rgb(12, 92, 3);
+    background-image: url('');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    padding: 20px; 
+    color: #fff;
+}
+
+.curso h1 span {
+    width: 40px;
+}
+
+.curso ul {
+    list-style-type:none ;
+    margin: 0;
+    padding: 10px;
+}
+
+.curso li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.curso li a {
+    color: blue;
+    text-decoration: none;
+
+}
+.curso li a:hover {
+    text-decoration: underline;
+}
+
+.disciplinas  {
+    width:100%;
+    border-collapse: collapse;
+}
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+  
+th {
+    background-color: #f2f2f2;
+}
+  
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Três colunas igualmente espaçadas */
+  gap: 10px; /* Espaçamento entre as fotos */
+  max-width: 1200px; /* Largura máxima da grade */
+  margin: 0 auto; /* Centraliza a grade horizontalmente */
+  padding: 20px; /* Espaçamento ao redor da grade */
+}
+
+/* Estilos para as imagens dentro da grade */
+.photo-grid img {
+  width: 70%; /* Ajusta a largura da imagem para ocupar o espaço da coluna */
+  height: auto; /* Mantém a proporção original da imagem */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilos para tornar a grade responsiva em dispositivos móveis */
+@media screen and (max-width: 820px) {
+  .photo-grid {
+    grid-template-columns: repeat(1, 1fr); /* Uma coluna em dispositivos móveis */
+  }
+
+  #header {
+        text-align: center;
+  }
+
+  .sobre {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .imgs {
+    display: none;
+  }
+
+  body {
+    font-size: medium;
+    display: flex;
+  }
+
+  .cliente {
+    display: none;
+  }
+
+  * {
+
+
+  }
+
+  .curso {
+    margin: 1px 1px;
+    padding: 0px;
+
+    display: grid;
+    gap: 10px;
+    max-width: 768px;
+    width: 100%;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .curso h1 {
+    font-size: larger;
+
+  }
+}
+
+.photo-grid div {
+    box-sizing: border-box;
+    margin: 0 0;
+    border: 1px solid #f3eeee;
+    border-radius: 5px;
+    padding: 5px 0px;
+    box-sizing: border-box; 
+    transition: background-image 0.3s ease-in-out;
+}
+
+.photo-grid span {
+    font-size: medium;
+    font-weight: 300;
+}
+
+.photo-grid div:hover {
+    border: 0.2px solid #3700ff;
+}
+
+.photo-grid button {
+    background-color: #ffffff;
+    height: 50px;
+    width: 150px;
+    border: 1px solid #efe8e8;
+    /* border:1px solid #ffffff; */
+    color:#000000;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.photo-grid button:hover {
+    background-color: #0d5687;
+    height: 50px;
+    width: 150px;
+    color: #fff;
+}
+
+.reference-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Três colunas igualmente espaçadas */
+    gap: 10px; /* Espaçamento entre as fotos */
+    max-width: 1200px; /* Largura máxima da grade */
+    margin: 10px 10px; /* Centraliza a grade horizontalmente */
+    padding: 20px; /* Espaçamento ao redor da grade */
+  }
+  
+  
+.reference-grid div {
+    box-sizing: border-box;
+    margin: 0 0;
+    border: 1px solid #0077ff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-sizing: border-box; 
+    text-align: left;
+}
+
+.reference-grid span {
+    font-size: medium;
+    font-weight: 300;
+}
+
+.reference-grid div:hover {
+    /* border: 0.2px solid #000000; */
+    
+}
+
+.reference-grid button {
+    background-color: #ffffff;
+    height: 50px;
+    width: 150px;
+    border: 1px solid #efe8e8;
+    /* border:1px solid #ffffff; */
+    color:#000000;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.reference-grid button:hover {
+    background-color: #0d5687;
+    height: 50px;
+    width: 150px;
+    color: #fff;
+}
