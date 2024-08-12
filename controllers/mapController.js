@@ -1,7 +1,7 @@
 import locationModel from '../models/locationModel.js';
 
-export function index(req, res) {
-  const locations = locationModel.getAllLocations();
+export async function index(req, res) {
+  const locations = await locationModel.findAll();
   res.render('index', { locations });
 }
 

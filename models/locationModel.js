@@ -1,15 +1,27 @@
-class LocationModel {
-    constructor() {
-      this.locations = [
-        { name: "Loja 1", lat: -6.88634, lon: -38.5614, description: "Loja principal em Cajazeiras" },
-        { name: "Loja 2", lat: -6.7583, lon: -38.2344, description: "Filial em Sousa" },
-      ];
-    }
-  
-    getAllLocations() {
-      return this.locations;
-    }
+import { DataTypes } from 'sequelize';
+import sequelize from '../db/sequelize';
+
+const Store = sequelize.define('Store', {
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  location: {
+    type: DataTypes.GEOMETRY('POINT'),
+    allowNull: false
+  },
+  description: {
+    type: DataTypes.STRING,
+    allowNull: false
   }
-  
-  export default new LocationModel();
-  
+
+})
+
+async function sincronizar(){
+  await Store.sync();
+  console.log("Sincronizado");
+}
+
+sincronizar();
+
+export default Store;
