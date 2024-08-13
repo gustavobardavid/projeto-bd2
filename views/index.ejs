@@ -377,10 +377,20 @@
                     
                     <h1>Nossas lojas</h1>
                     <div id="map" style="height: 400px; width: 100%;"></div>
+                    <div class="reference-grid">
+                            <% locations.forEach(location => { %>
+                                <div>
+                                    <h3>
+                                        <%= location.name %>
+                                    </h3> 
+                                    <p>
+                                        <%= location.description %> </li>
+                                    </p>
+                                </div>
+                                    <% }) %>
+                    </div>
                     <h1>REFERÊNCIAS</h1>
-                       
                         <div class="reference-grid">
-                                
                             <div>                            
                                     <h3>Maggie</h3> <small><span>Nota: ⭐️⭐️⭐️⭐️⭐️</span></small>
                                     <p>Bom não, mel!</p>
