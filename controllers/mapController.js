@@ -43,3 +43,7 @@ export async function agendarRetirada(req, res) {
     res.status(500).send('Erro ao agendar retirada');
   }
 }
+
+export async function pedidos(req, res) {
+  res.render('pedidos')
+}
