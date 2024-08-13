@@ -26,6 +26,10 @@ const Retirada = sequelize.define('Retirada', {
   item: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  concluida: {
+    type: DataTypes.BOOLEAN,
+    allowNull: true
   }
 })
 

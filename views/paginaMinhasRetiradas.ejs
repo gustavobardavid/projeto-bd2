@@ -7,30 +7,26 @@
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>Retirada Agendada</title>
+    <title>Meus Pedidos</title>
 </head>
 <body>
     <header id="header">
         <div class="header">
             <div class="content">
-                <div class="principal">
-                </div>
+                <div class="principal"></div>
                 <div class="logo">
-                    <p></p>
                     <a href="./"><img src="" alt="">Games</a>
-                    <p></p>
                 </div>
                 <div class="buscar">  
                     <form>
                         <input type="text" placeholder="O que você procura?">
-                        <button type="submit"><span class="material-symbols-outlined">
-                            search
-                            </span></button>
+                        <button type="submit">
+                            <span class="material-symbols-outlined">search</span>
+                        </button>
                     </form> 
                 </div>
                 <div class="cliente">
-                    <legend>R$ 0,00<span class="material-symbols-outlined">
-                            shopping_cart</span></legend>
+                    <legend>R$ 0,00<span class="material-symbols-outlined">shopping_cart</span></legend>
                 </div>
             </div>
         </div>
@@ -50,15 +46,31 @@
 
     <div class="main">
         <main>
-            <h1>Retirada Agendada</h1>
-            <p>Dirija-se à loja.</p>
+            <h1>Minhas Retiradas</h1>
+            <p>Abaixo estão listados suas retiradas agendadas:</p>
 
-            <div id="map" style="height: 400px; width: 100%;"></div>
-            
-            <h3>Detalhes da Retirada</h3>
-            
+            <table id="orders-table">
+                <thead>
+                    <tr>
+                        <th>ID da retirada</th>
+                        <th>Nome do Cliente</th>
+                        <th>CPF</th>
+                        <th>Email</th>
+                        <th>Localização da Loja</th>
+                        <th>Item</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </main>
     </div>
+    <!-- HTML para o popup do mapa -->
+<div id="map-popup" style="display:none;">
+    <div id="map" style="height: 400px; width: 100%;"></div>
+    <button id="close-map-popup">Fechar</button>
+</div>
 
     <footer>    
         <div class="footer">
@@ -99,7 +111,7 @@
             </div>
         </div>
     </footer>
-    
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/minhasRetiradas.js"></script>
 </html>

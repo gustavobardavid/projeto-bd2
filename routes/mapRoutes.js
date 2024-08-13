@@ -1,18 +1,24 @@
 // routes/mapRoutes.js
 import { Router } from 'express';
 const router = Router();
-import { compra, getAllStores, index, retirada, agendarRetirada } from '../controllers/mapController.js';
+import { renderizarPaginaHome, getAllStores, agendarRetirada, renderizarPaginaAgendar, renderizarPaginaItem, renderizarPaginaRetiradas, fetchRetiradas, excluirRetirada, marcarComoConcluida } from '../controllers/mapController.js';
 
-router.get('/', index);
+router.get('/', renderizarPaginaHome);
 
-router.get('/compra', compra);
+router.get('/item', renderizarPaginaItem);
 
-router.get('/retirada', retirada); 
+router.get('/pagina-agendar', renderizarPaginaAgendar); 
 
 router.post('/agendar', agendarRetirada);
 
 router.get('/lojas', getAllStores);
 
-router.get('/pedidos', pedidos);
+router.get('/pagina-retiradas', renderizarPaginaRetiradas);
+
+router.get('/retiradas', fetchRetiradas);
+
+router.delete('/retiradas/:id', excluirRetirada);
+
+router.patch('/retiradas/:id/concluir', marcarComoConcluida);
 
 export default router;

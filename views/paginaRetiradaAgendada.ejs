@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>Pedido</title>
+    <title>Retirada Agendada</title>
 </head>
 <body>
     <header id="header">
@@ -50,31 +50,13 @@
 
     <div class="main">
         <main>
-            <h1>Escolha seu local de retirada</h1>
-            <p>Encontre uma loja perto de você para retirar seu pedido.</p>
+            <h1>Retirada Agendada</h1>
+            <p>Dirija-se à loja.</p>
+        
+            <h3>Detalhes da Retirada:</h3>
 
-            <div id="map" style="height: 400px; width: 100%;"></div>
+            <h3>Ver mais em <a href="/pagina-retiradas">Minhas Retiradas</a></h3>
             
-            <h2>Detalhes do Pedido</h2>
-            <form id="pedido-form" method="post" action="/finalizar-pedido">
-                <label for="store">Loja selecionada:</label>
-                <select id="store" name="store">
-                </select>
-
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="nomeCliente" required>
-            
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="text">CPF:</label>
-                <input type="text" id="cpf" name="cpfCliente" required>
-
-                <label for="game">Game:</label>
-                <input type="text" id="game" name="item" class="form-control" readonly>
-
-                <button type="submit">Confirmar Pedido</button>
-            </form>
         </main>
     </div>
 
@@ -90,50 +72,34 @@
                 <section>
                     <menu>
                         <h2>Empresa</h2>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Depoimentos</a></li>
-                        <li><a href="#">Fale Conosco</a></li>
-                        <li><a href="#">Termos de Compra</a></li>
+                        <li><a>Política de Privacidade</a></li>
+                        <li><a>Depoimentos</a></li>
+                        <li><a>Fale Conosco</a></li>
+                        <li><a>Termos de Compra</a></li>
                     </menu>
                 </section>
                 <section>
                     <menu>
                         <h2>Cliente</h2>
-                        <li><a href="#">Prazos de Entrega</a></li>
-                        <li><a href="#">Formas de Pagamento</a></li>
-                        <li><a href="#">Reembolso e Cancelamento</a></li>
-                        <li><a href="#">Meus Pedidos</a></li>
+                        <li><a>Prazos de Entrega</a></li>
+                        <li><a>Formas de Pagamento</a></li>
+                        <li><a>Reembolso e Cancelamento</a></li>
+                        <li><a>Meus Pedidos</a></li>
                     </menu>
                 </section>
                 <section>
                     <menu>
                         <h2>Produtos e Serviços</h2>
-                        <li><a href="#">PlayStation 4</a></li>
-                        <li><a href="#">PlayStation 5</a></li>
-                        <li><a href="#">Xbox</a></li>
-                        <li><a href="#">Outro</a></li>
+                        <li><a>PlayStation 4</a></li>
+                        <li><a>PlayStation 5</a></li>
+                        <li><a>Xbox</a></li>
+                        <li><a>Outro</a></li>
                     </menu>
                 </section>
             </div>
         </div>
     </footer>
     
-    <script>
-        // Função para obter parâmetros da URL
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        // Preencher o campo do nome do jogo com o parâmetro da URL
-        document.addEventListener('DOMContentLoaded', function() {
-            const gameName = getQueryParam('game');
-            if (gameName) {
-                document.getElementById('game').value = gameName;
-            }
-        });
-    </script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="js/pedido.js"></script>
 </body>
 </html>
