@@ -35,7 +35,7 @@ export async function agendarRetirada(req, res) {
       item,
     });
 
-    res.render('paginaRetiradaAgendada', { retirada } );
+    res.render('paginaRetiradaAgendada', { retirada, store } );
   } catch (error) {
     console.error('Erro ao agendar retirada:', error);
     res.status(500).send('Erro ao agendar retirada');

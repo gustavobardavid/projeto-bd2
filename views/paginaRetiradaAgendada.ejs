@@ -51,18 +51,14 @@
     <div class="main">
         <main>
             <h1>Retirada Agendada</h1>
-            <p>Dirija-se à loja.</p>
+            <p>Dirija-se à loja <%= store %></p>
         
             <h3>Detalhes da Retirada:</h3>
 
-                <div>
-                    <h3>
-                        <%= retirada.name %>
-                    </h3> 
-                    <p>
-                        <%= retirada.description %> </li>
-                    </p>
-                </div>
+            <div>
+                <p>Item: <%= retirada.item %></p>
+                <div id="map" style="height: 400px; width: 100%;"></div>
+            </div>
 
             <h3>Ver mais em <a href="/pagina-retiradas">Minhas Retiradas</a></h3>
             
@@ -108,7 +104,24 @@
             </div>
         </div>
     </footer>
-    
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Acessando os dados da retirada no JavaScript
+        const latitude = <%= retirada.localizacaoLoja.coordinates[1] %>;
+        const longitude = <%= retirada.localizacaoLoja.coordinates[0] %>;
+        const store = "<%= store %>";
+
+        // Inicializando o mapa
+        const map = L.map('map').setView([latitude, longitude], 13);
+
+        // Adicionando uma camada de tiles ao mapa
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Adicionando o alfinete com uma descrição
+        const marker = L.marker([latitude, longitude]).addTo(map)
+            .bindPopup(`<b>${store}</b><br>${latitude}, ${longitude}`).openPopup();
+    </script>
 </body>
 </html>
