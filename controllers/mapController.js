@@ -27,8 +27,6 @@ export async function agendarRetirada(req, res) {
       
     const localizacaoLoja = loja.location;
 
-    
-    
     const retirada = await Retirada.create({
       nomeCliente,
       cpfCliente,
@@ -37,7 +35,7 @@ export async function agendarRetirada(req, res) {
       item,
     });
 
-    res.render('paginaRetiradaAgendada');
+    res.render('paginaRetiradaAgendada', { retirada } );
   } catch (error) {
     console.error('Erro ao agendar retirada:', error);
     res.status(500).send('Erro ao agendar retirada');
